@@ -7,15 +7,19 @@ class BankAccount {
     this.transaction = [];
   }
 
-  addTransaction(description, amount) {
-    const transaction = new Transaction(description, amount);
-    this.transaction.push(transaction);
+  addTransaction(date, amount, type) {
+    const transaction = new Transaction(date, amount, type);
+    this.transactions.push(transaction);
   }
 
   calculateBalance() {
     let balance = 0;
-    for (const transaction of this.transaction) {
-      balance += transaction.amount;
+    for (const transaction of this.transactions) {
+      if (transaction.type === "deposit") {
+        balance += transaction.amount;
+      } else if (transaction.type === "withdrawal") {
+        balance -= transaction.amount;
+      }
     }
     return balance;
   }
