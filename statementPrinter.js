@@ -7,4 +7,8 @@ class StatementPrinter {
   constructor() {
     this.bankAccount = new BankAccount();
   }
+
+  addTransaction(description, amount) {
+    this.bankAccount.addTransaction(description, amount);
+  }
 }
