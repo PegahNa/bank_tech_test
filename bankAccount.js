@@ -6,9 +6,19 @@ class BankAccount {
   constructor() {
     this.transaction = [];
   }
-}
 
-addTransaction(description, amount) {
+  addTransaction(description, amount) {
     const transaction = new Transaction(description, amount);
     this.transaction.push(transaction);
-};
+  }
+
+  calculateBalance() {
+    let balance = 0;
+    for (const transaction of this.transaction) {
+      balance += transaction.amount;
+    }
+    return balance;
+  }
+}
+
+module.exports = BankAccount;
