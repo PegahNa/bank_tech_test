@@ -7,3 +7,8 @@ class BankAccount {
     this.transaction = [];
   }
 }
+
+addTransaction(description, amount) {
+    const transaction = new Transaction(description, amount);
+    this.transaction.push(transaction);
+};
