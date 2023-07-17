@@ -5,7 +5,7 @@ const StatementPrinter = require("./statementPrinter");
 
 class BankAccount {
   constructor() {
-    this.transaction = [];
+    this.transactions = [];
     this.statementPrinter = new StatementPrinter();
   }
 

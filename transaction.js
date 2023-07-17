@@ -1,8 +1,8 @@
 // This file will contain the Transaction class,
 // which represents an individual deposit or withdrawal.
 class Transaction {
-  constructor(data, amount, type) {
-    this.data = data;
+  constructor(date, amount, type) {
+    this.date = date;
     this.amount = amount;
     this.type = type;
   }
