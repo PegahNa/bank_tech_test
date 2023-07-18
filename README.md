@@ -1,6 +1,11 @@
 # Basic Bank
 
 <br><br>
+To Install<br>
+Clone the repo to your local machine<br>
+npm install<br>
+
+<br><br>
 Develop a program that allows users to make deposits and withdrawals, maintains an account statement (with dates, amounts, and balances), and supports interaction through a REPL interface.<br><br>
 
 The BankAccount class handles the account's transactions and balances, the Transaction class represents an individual deposit or withdrawal, and the StatementPrinter class generates the account statement.<br><br>
