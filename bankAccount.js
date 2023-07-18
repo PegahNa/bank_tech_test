@@ -25,7 +25,8 @@ class BankAccount {
   }
 
   // Method to add a transaction to the transaction list
-  addTransaction(date, amount, type) {
+  addTransaction(amount, type) {
+    const date = new Date().toLocaleDateString();
     const transaction = new Transaction(date, amount, type);
     this.transactions.push(transaction);
   }
