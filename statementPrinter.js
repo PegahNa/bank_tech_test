@@ -3,12 +3,14 @@
 // It will import and utilize the Transaction and BankAccount classes.
 const BankAccount = require("./bankAccount");
 
+// The StatementPrinter class is responsible for generating the account statement
 class StatementPrinter {
   generateStatement(transactions) {
     let statement = "--- Account Statement ---\n";
     statement += "Date\t\tAmount\tType\n";
     statement += "-----------------------------\n";
 
+    // Iterate through the transactions and append each entry to the statement
     for (const transaction of transactions) {
       statement += `${transaction.date}\t${transaction.amount}\t${transaction.type}\n`;
     }
@@ -18,6 +20,8 @@ class StatementPrinter {
     return statement;
   }
 
+  // Calculate the current balance based on the transactions
+  calculateBalance(transactions) {
   calculateBalance(transactions) {
     let balance = 0;
     for (const transaction of transactions) {

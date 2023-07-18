@@ -13,8 +13,9 @@ class BankAccount {
   }
 
   // Method to add a deposit transaction
-  addDeposit(date, amount) {
-    this.addTransaction(date, amount, "deposit");
+  addDeposit(amount) {
+    const date = new Date().toLocaleDateString();
+    this.addTransaction(date.amount, "deposit");
   }
 
   // Method to add a withdrawal transaction
