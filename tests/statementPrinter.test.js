@@ -24,10 +24,10 @@ describe("StatementPrinter", () => {
 
     // Assert that the statement has the correct format and balance
     expect(statement).toContain("--- Account Statement ---");
-    expect(statement).toContain("Date\t\tAmount\tType");
-    expect(statement).toContain("10/01/2023\t1000\tdeposit");
-    expect(statement).toContain("13/01/2023\t2000\tdeposit");
-    expect(statement).toContain("14/01/2023\t500\twithdrawal");
-    expect(statement).toContain("Current Balance: 2500");
+    expect(statement).toContain("Date\t\tAmount\tType\tBalance");
+    expect(statement).toContain("10/01/2023\t1000.00\tdeposit\t1000.00");
+    expect(statement).toContain("13/01/2023\t2000.00\tdeposit\t3000.00");
+    expect(statement).toContain("14/01/2023\t500.00\twithdrawal\t2500.00");
+    expect(statement).toContain("-------------------------------");
   });
 });
