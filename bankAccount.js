@@ -19,7 +19,8 @@ class BankAccount {
   }
 
   // Method to add a withdrawal transaction
-  addWithdrawal(date, amount) {
+  addWithdrawal(amount) {
+    const date = new Date().toLocaleDateString();
     this.addTransaction(date, amount, "withdrawal");
   }
 
