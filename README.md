@@ -1,4 +1,5 @@
-Basic Bank
+# Basic Bank
+
 <br><br>
 Develop a program that allows users to make deposits and withdrawals, maintains an account statement (with dates, amounts, and balances), and supports interaction through a REPL interface.<br><br>
 
