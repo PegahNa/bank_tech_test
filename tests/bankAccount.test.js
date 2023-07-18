@@ -12,27 +12,27 @@ describe("BankAccount", () => {
 
   // Test case: should calculate the correct balance after adding transactions
   test("should calculate the correct balance after adding transactions", () => {
-    bankAccount.addDeposit("10/01/2023", 1000);
-    bankAccount.addDeposit("13/01/2023", 2000);
+    bankAccount.addDeposit(1000);
+    bankAccount.addDeposit(2000);
 
     expect(bankAccount.calculateBalance()).toBe(3000);
   });
 
   // Test case: should calculate the correct balance after subtracting transaction
   test("should calculate the correct balance after subtracting transaction", () => {
-    bankAccount.addDeposit("10/01/2023", 1000);
-    bankAccount.addWithdrawal("13/01/2023", 500);
-    bankAccount.addWithdrawal("15/01/2023", 200);
+    bankAccount.addDeposit(1000);
+    bankAccount.addWithdrawal(500);
+    bankAccount.addWithdrawal(200);
 
     expect(bankAccount.calculateBalance()).toBe(300);
   });
 
   // Test case: should calculate the correct balance with a mix of deposits and withdrawals
   test("should calculate the correct balance with a mix of deposits and withdrawals", () => {
-    bankAccount.addDeposit("10/01/2023", 1000);
-    bankAccount.addWithdrawal("13/01/2023", 500);
-    bankAccount.addDeposit("15/01/2023", 2000);
-    bankAccount.addWithdrawal("17/01/2023", 800);
+    bankAccount.addDeposit(1000);
+    bankAccount.addWithdrawal(500);
+    bankAccount.addDeposit(2000);
+    bankAccount.addWithdrawal(800);
 
     expect(bankAccount.calculateBalance()).toBe(1700);
   });

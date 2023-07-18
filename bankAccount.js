@@ -48,7 +48,7 @@ class BankAccount {
     // Check if there are no transactions
     if (this.transactions.length === 0) {
       console.log("No transactions found");
-      return;
+      return "No transactions found";
     }
 
     const date = new Date().toLocaleDateString();
