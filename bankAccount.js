@@ -15,18 +15,17 @@ class BankAccount {
   // Method to add a deposit transaction
   addDeposit(amount) {
     const date = new Date().toLocaleDateString();
-    this.addTransaction(date.amount, "deposit");
+    this.addTransaction(date, parseFloat(amount), "deposit");
   }
 
   // Method to add a withdrawal transaction
   addWithdrawal(amount) {
     const date = new Date().toLocaleDateString();
-    this.addTransaction(date, amount, "withdrawal");
+    this.addTransaction(date, parseFloat(amount), "withdrawal");
   }
 
   // Method to add a transaction to the transaction list
-  addTransaction(amount, type) {
-    const date = new Date().toLocaleDateString();
+  addTransaction(date, amount, type) {
     const transaction = new Transaction(date, amount, type);
     this.transactions.push(transaction);
   }
@@ -48,14 +47,17 @@ class BankAccount {
   printStatement() {
     // Check if there are no transactions
     if (this.transactions.length === 0) {
-      return "No transactions found";
+      console.log("No transactions found");
+      return;
     }
+
+    const date = new Date().toLocaleDateString();
+    console.log(`Statement as of ${date}:`);
 
     const statement = this.statementPrinter.generateStatement(
       this.transactions
     );
     console.log(statement);
-    return statement;
   }
 }
 

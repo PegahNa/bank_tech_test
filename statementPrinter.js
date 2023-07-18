@@ -7,31 +7,41 @@ const BankAccount = require("./bankAccount");
 class StatementPrinter {
   generateStatement(transactions) {
     let statement = "--- Account Statement ---\n";
-    statement += "Date\t\tAmount\tType\n";
-    statement += "-----------------------------\n";
+    statement += "Date\t\tAmount\tType\tBalance\n";
+    statement += "-------------------------------\n";
 
-    // Iterate through the transactions and append each entry to the statement
+    let balance = 0;
     for (const transaction of transactions) {
-      statement += `${transaction.date}\t${transaction.amount}\t${transaction.type}\n`;
+      const { date, amount, type } = transaction;
+      if (type === "deposit") {
+        balance += amount;
+      } else if (type === "withdrawal") {
+        balance -= amount;
+      }
+      statement += `${date}\t${this.formatAmount(
+        amount
+      )}\t${type}\t${this.formatAmount(balance)}\n`;
     }
 
-    statement += "-----------------------------\n";
-    statement += `Current Balance: ${this.calculateBalance(transactions)}\n`;
+    statement += "-------------------------------\n";
     return statement;
   }
 
+  formatAmount(amount) {
+    return Number(amount).toFixed(2);
+  }
+
   // Calculate the current balance based on the transactions
-  calculateBalance(transactions) {
-  calculateBalance(transactions) {
+  calculateBalance() {
     let balance = 0;
-    for (const transaction of transactions) {
+    for (const transaction of this.transactions) {
       if (transaction.type === "deposit") {
         balance += transaction.amount;
       } else if (transaction.type === "withdrawal") {
         balance -= transaction.amount;
       }
     }
-    return balance;
+    return balance.toFixed(2); // Fix the balance to two decimal places
   }
 }
 
