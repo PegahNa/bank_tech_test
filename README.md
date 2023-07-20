@@ -10,7 +10,6 @@ Develop a program that allows users to make deposits and withdrawals, maintains 
 
 The BankAccount class handles the account's transactions and balances, the Transaction class represents an individual deposit or withdrawal, and the StatementPrinter class generates the account statement.<br><br>
 
-Implement algorithms to calculate balances based on the transaction history and generate the account statement. <br><br>
 
 Use the system by typing node bankAccountCLI.js <br>
 <br>
