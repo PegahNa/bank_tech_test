@@ -15,17 +15,17 @@ Use the system by typing node bankAccountCLI.js <br>
 
 Welcome to the Bank Account CLI!<br>
 
-> deposit 3500
+> deposit 3500<br>
 > Deposit of 3500 successfully made.<br>
-> deposit 1600
+> deposit 1600<br>
 > Deposit of 1600 successfully made.<br>
-> withdraw 500
+> withdraw 500<br>
 > Withdrawal of 500 successfully made.<br>
-> deposit 50
+> deposit 50<br>
 > Deposit of 50 successfully made.<br>
-> balance
+> balance<br>
 > Current balance: 4650<br>
-> statement
+> statement<br>
 > Statement as of 7/20/2023:<br>
 > --- Account Statement ---<br>
 > Date Amount Type Balance<br>
@@ -34,6 +34,6 @@ Welcome to the Bank Account CLI!<br>
 > 7/20/2023 1600.00 deposit 5100.00<br>
 > 7/20/2023 500.00 withdrawal 4600.00<br>
 > 7/20/2023 50.00 deposit 4650.00<br>
-> -------------------------------<br> > <br>
-> exit
+> -------------------------------<br><br>
+> exit<br>
 > Exiting the program. Goodbye!<br>
