@@ -34,7 +34,6 @@ Welcome to the Bank Account CLI!<br>
 > 7/20/2023 1600.00 deposit 5100.00<br>
 > 7/20/2023 500.00 withdrawal 4600.00<br>
 > 7/20/2023 50.00 deposit 4650.00<br>
-> -------------------------------<br>
-> <br>
+> -------------------------------<br> > <br>
 > exit
 > Exiting the program. Goodbye!<br>
